@@ -7,7 +7,7 @@ public class exp1e {
      } else {
          System.out.println("The number is not a leap year.");
      }
-     System.out.println();87
+     System.out.println();
      
      int nextYear = n + 1;
      while (!((nextYear % 4 == 0 && nextYear % 100 != 0) || (nextYear % 400 == 0))) {
