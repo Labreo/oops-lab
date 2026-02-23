@@ -4,7 +4,7 @@ package Exp3;
 import java.util.Scanner;
 
 
-public class anagramcheck {
+public class Anagramcheck {
     public static boolean anagram(String s1,String s2) {
         boolean flag = false;
         for(char c1:s1.toCharArray()){

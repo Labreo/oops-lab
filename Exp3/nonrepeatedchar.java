@@ -2,7 +2,7 @@ package Exp3;
 
 import java.util.Scanner;
 
-public class nonrepeatedchar {
+public class Nonrepeatedchar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the string:");
