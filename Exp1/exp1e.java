@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class exp1e {
    public static void leapyear(int n){
      if ((n % 4 == 0 && n % 100 != 0) || (n % 400 == 0)) {
-        System.out.println("The number is a"+n+"year.");
+        System.out.println("The number "+n+ " is a leap year.");
      } else {
-         System.out.println("The number is not a leap year.");
+         System.out.println("The number "+n+ " is not a leap year.");
      }
      System.out.println();
      
