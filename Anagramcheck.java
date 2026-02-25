@@ -1,7 +1,4 @@
-package Exp3;
 
-
-import java.util.Scanner;
 
 
 public class Anagramcheck {
@@ -21,12 +18,11 @@ public class Anagramcheck {
         return true;
     }
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first string:");
-        String s1 = scanner.nextLine();
-        s1=s1.toLowerCase();
-           System.out.println("Enter the second string:");
-        String s2 = scanner.nextLine();  
+       
+        String s1;
+        s1=args[0];
+         s1=s1.toLowerCase();
+         String s2=args[1];
         s2=s2.toLowerCase();
         if(s1.length()!=s2.length()){
             System.out.println("The strings are not the same length so they cannot be anagrams.");
