@@ -81,10 +81,14 @@ public class EmployeeSalaryCalculation {
             System.out.print("Basic Salary: ");
             double salary = scanner.nextDouble();
 
-            employees[i] = new Employee();
-            employees[i].setEmployeeid(id);
-            employees[i].setName(name);
-            employees[i].setBasicsalary(salary);
+            if (i % 2 == 0) {
+                employees[i] = new Employee(id, name, salary);
+            } else {
+                employees[i] = new Employee();
+                employees[i].setEmployeeid(id);
+                employees[i].setName(name);
+                employees[i].setBasicsalary(salary);
+            }
         }
 
         System.out.println("\nEmployee Salary Details");

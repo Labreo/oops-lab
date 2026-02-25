@@ -7,12 +7,14 @@ class Book{
     private String title;
     private String author;
     private double price;
+    
      public Book() {
         this.bookid = 0;
         this.author = "Unknown";
         this.title = "Unknown";
         this.price = 0.0;
     }
+    
      public Book(int bookid, String title, String author,double price) {
         this.bookid = bookid;
         this.title = title;
@@ -27,15 +29,31 @@ class Book{
     public void settitle(String title){
       this.title = title;
     }
+    
     public void setauthor(String author){
       this.author = author;
     }
+    
      public void setprice(double price){
       this.price = price;
     }
+    
+    public int getbookid() {
+        return bookid;
+    }
+    
+    public String gettitle() {
+        return title;
+    }
+    
+    public String getauthor() {
+        return author;
+    }
+    
      public double getprice() {
         return price;
     }
+    
     @Override
     public String toString() {
         return "Book Details:\n" +
@@ -55,37 +73,40 @@ public class BookInventorySystem {
         int n = sc.nextInt();
         sc.nextLine();
         Book[] books = new Book[n];
+         
          for (int i = 0; i < n; i++) {
-         System.out.println("\nEnter details for the Book No " + (i + 1));
-
+            System.out.println("\nEnter details for the Book No " + (i + 1));
             
             int id = i+1;
             
-
             System.out.print("Title: ");
             String title = sc.nextLine();
-             System.out.print("Author: ");
+            System.out.print("Author: ");
             String author = sc.nextLine();
             System.out.print("Price: ");
             double price = sc.nextDouble();
             sc.nextLine();
 
-            books[i] = new Book();
-            books[i].setbookid(id);
-            books[i].settitle(title);
-            books[i].setprice(price);
-            books[i].setauthor(author);
+            if (i % 2 == 0) {
+                books[i] = new Book(id, title, author, price);
+            } else {
+                books[i] = new Book();
+                books[i].setbookid(id);
+                books[i].settitle(title);
+                books[i].setauthor(author);
+                books[i].setprice(price);
+            }
          }
+         
         System.out.println("Enter the price above which we want to show the books:");
         double compprice = sc.nextDouble();
-     System.out.println("Here are the books above "+compprice+":");
-      for(int i=0;i<n;++i){
+        System.out.println("Here are the books above "+compprice+":");
         
+      for(int i=0;i<n;++i){
         if(compprice<books[i].getprice()){
          System.out.println(books[i]);
         }
       }
       sc.close();
     }
-
 }

@@ -1,4 +1,3 @@
-
 package Exp4;
 
 import java.util.Scanner;
@@ -44,7 +43,6 @@ class Student {
         this.marks = marks;
     }
 
-  
     @Override
     public String toString() {
         return "Student Details:\n" +
@@ -58,20 +56,16 @@ public class StudentRecordManagement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Enter the number of students (N): ");
         int N = scanner.nextInt();
         scanner.nextLine();
 
-
         Student[] students = new Student[N];
         double totalMarksSum = 0;
-
        
         for (int i = 0; i < N; i++) {
             System.out.println("\nEnter details for student " + (i + 1) + ":");
             
-         
             System.out.print("Enter Roll Number: ");
             int roll = scanner.nextInt();
             scanner.nextLine(); 
@@ -81,13 +75,13 @@ public class StudentRecordManagement {
             double marks = scanner.nextDouble();
             scanner.nextLine();
 
-            students[i] = new Student(roll, name, marks);
-            
-           
-            if (i == 0) {
-                 Student defaultStudent = new Student();
-                 defaultStudent.setRollNumber(1);
-                
+            if (i % 2 == 0) {
+                students[i] = new Student(roll, name, marks);
+            } else {
+                students[i] = new Student();
+                students[i].setRollNumber(roll);
+                students[i].setName(name);
+                students[i].setMarks(marks);
             }
 
             totalMarksSum += students[i].getMarks();
