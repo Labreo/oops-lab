@@ -5,9 +5,10 @@ import java.util.*;
 
 public class StringToTitleCase {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s1 = scanner.nextLine().toLowerCase();
+  Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the string which you want to convert into a titleCase:");
+              
+        String s1 = scanner.nextLine().toLowerCase();
         String[] parts = s1.split(" ");
 
         StringBuilder result = new StringBuilder();

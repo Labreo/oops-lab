@@ -1,5 +1,6 @@
 
-
+//(base) sanjaywaradkar@Sanjays-MacBook-Air-2 oops-lab % javac Anagramcheck.java        
+//(base) sanjaywaradkar@Sanjays-MacBook-Air-2 oops-lab % java Anagramcheck silent listen
 
 public class Anagramcheck {
     public static boolean anagram(String s1,String s2) {

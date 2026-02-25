@@ -93,13 +93,13 @@ public class StudentRecordManagement {
             totalMarksSum += students[i].getMarks();
         }
 
-        System.out.println("\n--- Student Details ---");
+        System.out.println("\n Student Details:");
         for (Student student : students) {
             System.out.println(student.toString());
         }
 
         double averageMarks = totalMarksSum / N;
-        System.out.println("--- Summary ---");
+    
         System.out.println("Total students: " + N);
         System.out.println("Average marks of all students: " + averageMarks);
 

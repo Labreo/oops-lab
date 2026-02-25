@@ -87,7 +87,7 @@ public class EmployeeSalaryCalculation {
             employees[i].setBasicsalary(salary);
         }
 
-        System.out.println("\n----- Employee Salary Details -----");
+        System.out.println("\nEmployee Salary Details");
         for (Employee emp : employees) {
             System.out.println(emp);
         }
