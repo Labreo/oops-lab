@@ -45,8 +45,9 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student Details:\n" +
-               "Roll Number: " + rollNumber + "\n" +
+        return """
+               Student Details:
+               Roll Number: """ + rollNumber + "\n" +
                "Name: " + name + "\n" +
                "Marks: " + marks + "\n";
     }
