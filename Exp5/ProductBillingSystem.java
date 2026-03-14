@@ -94,7 +94,8 @@ public class ProductBillingSystem {
                 products[i].setquantity(quantity);
             }
         }
-        sum = calculateStoreRevenue(products);
+        sum =ProductBill.calculateStoreRevenue(products);
+        System.out.println("\nThe sum of all the products are:"+sum);
         sc.close();
     }
 }
