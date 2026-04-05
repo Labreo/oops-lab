@@ -1,4 +1,5 @@
 package Exp6;
+
 import java.util.Scanner;
 
 class Person {
