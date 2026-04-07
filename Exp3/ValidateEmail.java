@@ -13,4 +13,7 @@ String emailregex ="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 Pattern p = Pattern.compile(emailregex);
 if(p.matcher(email).matches()){
   System.out.println("The email:"+email+" is a valid email.");
- }else{System.out.println("The email:"+email+" is not a valid email."); } }}
+ }else{System.out.println("The email:"+email+" is not a valid email.");
+ } 
+}
+}

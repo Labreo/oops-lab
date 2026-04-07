@@ -10,7 +10,7 @@ class Library{
     public void issueBook(){
         --totalBooksAvailable;
     }
-        public void returnBook(){
+    public void returnBook(){
         ++totalBooksAvailable;
     }
      public static void displayTotalBooks(){
@@ -30,7 +30,7 @@ public class LibraryManagement {
             System.out.println("The book has been issued.\n");
             lib.issueBook();
         }
-                if(input==1){
+        if(input==1){
             System.out.println("The book has been returned.\n");
             lib.returnBook();
         }

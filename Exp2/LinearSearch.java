@@ -25,13 +25,11 @@ public class LinearSearch {
                 break; 
             }
         }
-
         if (found) {
             System.out.println(searchElement + " is present at index position: " + position);
         } else {
             System.out.println(searchElement + " is not present in the array.");
         }
-
         scanner.close();
     }
 }

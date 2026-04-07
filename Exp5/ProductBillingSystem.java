@@ -94,8 +94,11 @@ public class ProductBillingSystem {
                 products[i].setquantity(quantity);
             }
         }
+        for(ProductBill p:products){
+            System.out.println("\nThe total price of "+p.getname()+" is "+ p.calculateTotalPrice());
+        }
         sum =ProductBill.calculateStoreRevenue(products);
-        System.out.println("\nThe sum of all the products are:"+sum);
+        System.out.println("\nThe total store revenue of all the products are:"+sum);
         sc.close();
     }
 }
