@@ -13,7 +13,7 @@ public class NoOfOccurance {    public static void main(String[] args) {
         System.out.print("\nEnter the element to find the number of occurances for: ");
         searchElement = scanner.nextInt();
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == searchElement) {               
+            if (array[i] == searchElement) {                
                 found = true;               count++;                          }
         }       if (found) {          System.out.println(searchElement + " has occured "+count+" times in the array. ");
         } else {         System.out.println(searchElement + " is not present in the array.");

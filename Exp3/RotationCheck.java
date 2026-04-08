@@ -21,7 +21,7 @@ public class RotationCheck {
 
         if (RotateCheck(sin, sout)) {
             System.out.println("Yes,The string " + sout + " is a rotation of string " + sin + ".");
-        } else {
+        }else {
             System.out.println("No,The string " + sout + " is not a rotation of string " + sin + ".");
         }
         scanner.close();
