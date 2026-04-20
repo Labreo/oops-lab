@@ -1,4 +1,4 @@
-package Exp6;
+package Exp6.company;
 
 import java.util.Scanner;
 

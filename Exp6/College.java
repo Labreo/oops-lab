@@ -1,25 +1,40 @@
-package Exp6;
+package Exp6.college;
 import java.util.Scanner;
 
-class person {
+class Person {
     public String name;
     public int age;
 
-    public person() {
+    public Person() {
         this.name = "Unknown";
         this.age = 0;
     }
 
-    public person(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
         System.out.println("Person constructor called.");
     }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void displayPersonDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
 
     @Override
     public String toString() {
@@ -27,7 +42,7 @@ class person {
     }
 }
 
-class Staff extends person {
+class Staff extends Person {
     public int staffId;
 
     public Staff() {
@@ -41,8 +56,13 @@ class Staff extends person {
         System.out.println("Staff constructor called.");
     }
 
-    public int getStaffId() { return staffId; }
-    public void setStaffId(int staffId) { this.staffId = staffId; }
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
 
     @Override
     public String toString() {
@@ -67,10 +87,21 @@ class Professor extends Staff {
         System.out.println("Professor constructor called.");
     }
 
-    public String getDepartment() { return department; }
-    public void setDepartment(String department) { this.department = department; }
-    public String getResearchArea() { return researchArea; }
-    public void setResearchArea(String researchArea) { this.researchArea = researchArea; }
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getResearchArea() {
+        return researchArea;
+    }
+
+    public void setResearchArea(String researchArea) {
+        this.researchArea = researchArea;
+    }
 
     @Override
     public String toString() {
