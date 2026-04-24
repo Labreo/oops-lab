@@ -1,3 +1,4 @@
+package Exp10;
 import java.util.Scanner;
 
 class InvalidTemperatureException extends RuntimeException {

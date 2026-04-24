@@ -91,7 +91,8 @@ class Aircraft extends Vehicle implements AeroDynamic {
         this.fuelCapacity = 0.0;
     }
 
-    public Aircraft(String vehicleId, double mass, double maxSpeed, double wingSpan, double altitude, double fuelCapacity) {
+    public Aircraft(String vehicleId, double mass, double maxSpeed, double wingSpan, double altitude,
+            double fuelCapacity) {
         super(vehicleId, mass, maxSpeed);
         this.wingSpan = wingSpan;
         this.altitude = altitude;
@@ -105,13 +106,14 @@ class Aircraft extends Vehicle implements AeroDynamic {
 
     @Override
     public double liftCoefficient(double velocity, double wingArea) {
-        double alpha = 0.087; 
+        double alpha = 0.087;
         return 2 * Math.PI * alpha;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " -> Aircraft [WingSpan: " + wingSpan + " m, Altitude: " + altitude + " m, Fuel Capacity: " + fuelCapacity + " kg]";
+        return super.toString() + " -> Aircraft [WingSpan: " + wingSpan + " m, Altitude: " + altitude
+                + " m, Fuel Capacity: " + fuelCapacity + " kg]";
     }
 }
 
@@ -121,10 +123,11 @@ class FighterJet extends Aircraft implements SupersonicCapable, MissionPlannable
         super();
     }
 
-    public FighterJet(String vehicleId, double mass, double maxSpeed, double wingSpan, double altitude, double fuelCapacity) {
+    public FighterJet(String vehicleId, double mass, double maxSpeed, double wingSpan, double altitude,
+            double fuelCapacity) {
         super(vehicleId, mass, maxSpeed, wingSpan, altitude, fuelCapacity);
     }
-
+ 
     @Override
     public double machNumber(double velocity, double speedOfSound) {
         return velocity / speedOfSound;
@@ -132,9 +135,9 @@ class FighterJet extends Aircraft implements SupersonicCapable, MissionPlannable
 
     @Override
     public double dragForce(double Cd, double airDensity, double velocity, double refArea) {
-        double baseDrag = AeroDynamic.super.dragForce(Cd, airDensity, velocity, refArea);
+        double baseDrag = SupersonicCapable.super.dragForce(Cd, airDensity, velocity, refArea);
         double machNo = machNumber(velocity, 343.0);
-        
+
         if (machNo > 1.0) {
             double dynamicPressure = 0.5 * airDensity * Math.pow(velocity, 2);
             double waveDrag = 0.1 * Math.pow(machNo - 1, 2) * refArea * dynamicPressure;
@@ -147,24 +150,24 @@ class FighterJet extends Aircraft implements SupersonicCapable, MissionPlannable
     public double missionRange(double fuelCapacity, double burnRate) {
         double initialMass = this.mass + (0.95 * fuelCapacity);
         double finalMass = this.mass + (0.40 * fuelCapacity);
-        
+
         double thrust = engineThrust(burnRate);
         double isp = fuelEfficiency(thrust, burnRate);
         double cruiseVelocity = this.maxSpeed * 0.8;
-        
+
         double refArea = this.wingSpan * (this.wingSpan / 4.0);
         double liftCoef = liftCoefficient(cruiseVelocity, refArea);
-        
+
         double lift = liftCoef * 0.5 * 1.225 * Math.pow(cruiseVelocity, 2) * refArea;
         double drag = dragForce(0.025, 1.225, cruiseVelocity, refArea);
         double ldRatio = liftToDragRatio(lift, drag);
-        
+
         return (isp * cruiseVelocity * ldRatio) * Math.log(initialMass / finalMass);
     }
 
     @Override
     public String currentPosition(double time) {
-        double headingAngle = 45.0; 
+        double headingAngle = 45.0;
         double x = this.maxSpeed * time * Math.cos(Math.toRadians(headingAngle));
         double y = this.maxSpeed * time * Math.sin(Math.toRadians(headingAngle));
         return String.format("X: %.2f, Y: %.2f", x, y);
@@ -208,11 +211,11 @@ public class Q2_AerospaceVehicleSimulationSystem {
 
         double maxRange = jet.missionRange(jet.fuelCapacity, burnRate);
         double combatRadius = jet.combatRadius(maxRange);
-        
+
         double heatGenerated = jet.heatGenerated(2.2);
-        
+
         double sonicBoomOverpressure = jet.sonicBoom(15000, 2.2);
-        
+
         double kineticEnergy = jet.kineticEnergy(jet.maxSpeed);
 
         System.out.println("\n--- Mission Simulation Results ---");
