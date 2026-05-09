@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Q3_ArrayList {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.util.Scanner(System.in));
+        Scanner sc = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
 
         System.out.print("Enter how many integers you want to enter: ");
