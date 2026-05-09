@@ -9,22 +9,27 @@ public class Q1_ReverseStack {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nEnter the string you want to be reversed:");
         String s = sc.nextLine();
-        System.out.println("\nThe orignal string is:"+s);
-         Stack<Character> st = new Stack<>();
-           System.out.println("\nThe reversed string is:");
-  
-        for(char c:s.toCharArray()){
-            if(c==' '){
+        System.out.println("\nThe original string is: " + s);
+        
+        Stack<Character> st = new Stack<>();
+        System.out.println("\nThe reversed string is:");
+
+        for (char c : s.toCharArray()) {
+            if (c == ' ') {
+                while (!st.empty()) {
+                    System.out.print(st.pop());
+                }
+                System.out.print(" ");
+            } else {
                 st.push(c);
-                
-         while(st.empty()!=true){
+            }
+        }
+        
+        while (!st.empty()) {
             System.out.print(st.pop());
         }
-            }else{
-          st.push(c);}
-          
-        }
-      
+        
+        System.out.println();
         
         sc.close();
     }
