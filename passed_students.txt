@@ -1,0 +1,7 @@
+----- PASSED STUDENTS -----
+Roll Number: 101 | Name: John Doe | Marks: 85.5
+Roll Number: 103 | Name: Robert Brown | Marks: 72.0
+
+----- CLASS STATISTICS -----
+Total students evaluated: 3
+Class Average Marks: 65.17

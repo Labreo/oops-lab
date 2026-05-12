@@ -1,0 +1,8 @@
+Here are the books above 500.0:
+========================
+Book Details:
+Book id: 102
+Author: James Clear
+Title: Atomic Habits
+Price: 600.0
+------------------------

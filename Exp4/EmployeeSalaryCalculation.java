@@ -44,17 +44,17 @@ class Employee {
     }
 
     public double calculateGrossSalary() {
-        double allowances = 0.2 * basicsalary; 
+        double allowances = 0.2 * basicsalary;
         return basicsalary + allowances;
     }
 
     @Override
     public String toString() {
         return "Employee Details:\n" +
-               "Employee ID: " + employeeid + "\n" +
-               "Name: " + name + "\n" +
-               "Basic Salary: " + basicsalary + "\n" +
-               "Gross Salary: " + calculateGrossSalary() + "\n";
+                "Employee ID: " + employeeid + "\n" +
+                "Name: " + name + "\n" +
+                "Basic Salary: " + basicsalary + "\n" +
+                "Gross Salary: " + calculateGrossSalary() + "\n";
     }
 }
 

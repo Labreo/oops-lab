@@ -1,0 +1,12 @@
+Employee Salary Details
+========================
+Employee ID: 101
+Name: Alice Sharma
+Basic Salary: 55000.0
+Gross Salary: 66000.0
+------------------------
+Employee ID: 102
+Name: Bob Fernandes
+Basic Salary: 62000.0
+Gross Salary: 74400.0
+------------------------

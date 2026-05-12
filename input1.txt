@@ -1,0 +1,10 @@
+3
+101
+John Doe
+85.5
+102
+Jane Smith
+38.0
+103
+Robert Brown
+72.0
