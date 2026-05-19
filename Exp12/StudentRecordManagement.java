@@ -54,7 +54,9 @@ class Student {
 
 public class StudentRecordManagement {
     public static void main(String[] args) {
-        String inputFileName = "input1.txt";
+          Scanner sc = new Scanner(System.in);
+        String inputFileName = sc.nextLine();
+        sc.close();
         String outputFileName = "passed_students.txt";
         double passingMarks = 40.0; 
 

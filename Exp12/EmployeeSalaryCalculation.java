@@ -1,6 +1,7 @@
 package Exp12;
 
 import java.io.*;
+import java.util.Scanner;
 
 class Employee {
     private int employeeid;
@@ -41,7 +42,9 @@ class Employee {
 
 public class EmployeeSalaryCalculation {
     public static void main(String[] args) {
-        String inputFileName = "input2.txt";
+         Scanner sc = new Scanner(System.in);
+        String inputFileName = sc.nextLine();//input2.txt
+        sc.close();
         String outputFileName = "output.txt";
         File inputFile = new File(inputFileName);
         if (!inputFile.exists()) {
@@ -53,7 +56,7 @@ public class EmployeeSalaryCalculation {
             return;
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) { // Overwrite mode by default. Use FileWriter(outputFileName, true) for Append.
+             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) { 
             String line = reader.readLine();
             if (line == null) {
                 System.out.println("Input file is empty.");

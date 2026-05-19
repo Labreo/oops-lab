@@ -1,8 +1,20 @@
-Here are the books above 500.0:
+Here are the books above 200.0:
 ========================
+Book Details:
+Book id: 101
+Author: Paulo Coelho
+Title: The Alchemist
+Price: 450.0
+------------------------
 Book Details:
 Book id: 102
 Author: James Clear
 Title: Atomic Habits
 Price: 600.0
+------------------------
+Book Details:
+Book id: 103
+Author: George Orwell
+Title: 1984
+Price: 350.0
 ------------------------

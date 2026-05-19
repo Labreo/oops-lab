@@ -72,7 +72,9 @@ class Book {
 
 public class BookInventorySystem {
     public static void main(String[] args) {
-        String inputFileName = "input3.txt";
+        Scanner sc = new Scanner(System.in);
+        String inputFileName = sc.nextLine();
+        //input3.txt
         String outputFileName = "output2.txt";
         File inputFile = new File(inputFileName);
 
@@ -85,10 +87,10 @@ public class BookInventorySystem {
             return;
         }
 
-        Scanner consoleScanner = new Scanner(System.in);
+        
         System.out.print("Enter the price above which we want to show the books: ");
-        double compprice = consoleScanner.nextDouble();
-        consoleScanner.close();
+        double compprice = sc.nextDouble();
+        sc.close();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
