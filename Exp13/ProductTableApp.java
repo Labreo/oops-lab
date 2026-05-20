@@ -125,7 +125,7 @@ public class ProductTableApp {
             gbc.weightx = 1.0;
             gbc.weighty = 1.0;
             gbc.fill = GridBagConstraints.BOTH;
-            layeredPane.add(bottomPanel, gbc, Integer.valueOf(0));
+            layeredPane.add(bottomPanel, gbc, Integer.valueOf(1));
 
             GridBagConstraints gbcImage = new GridBagConstraints();
             gbcImage.gridx = 0;
@@ -134,7 +134,7 @@ public class ProductTableApp {
             gbcImage.weighty = 1.0;
             gbcImage.anchor = GridBagConstraints.NORTHEAST;
             gbcImage.insets = new Insets(20, 0, 0, 35);
-            layeredPane.add(imageLabel, gbcImage, Integer.valueOf(1));
+            layeredPane.add(imageLabel, gbcImage, Integer.valueOf(0));
 
             frame.setVisible(true);
         });
