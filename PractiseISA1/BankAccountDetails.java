@@ -1,4 +1,4 @@
-package Exp4;
+package PractiseISA1;
 
 import java.util.Scanner;
 
@@ -54,10 +54,10 @@ class BankAccount {
 
     @Override
     public String toString() {
-            return "Bank Details:\n" +
-               "Account No: " + accountno + "\n" +
-               "Name: " + name + "\n" +
-               "Balance: " + balance + "\n";
+        return "Bank Details:\n" +
+                "Account No: " + accountno + "\n" +
+                "Name: " + name + "\n" +
+                "Balance: " + balance + "\n";
     }
 }
 
@@ -67,7 +67,7 @@ public class BankAccountDetails {
         System.out.println("\nEnter the amount of accounts to be created:");
         int n = sc.nextInt();
         BankAccount[] bankAccounts = new BankAccount[n];
-        
+
         for (int i = 0; i < n; i++) {
             System.out.println("\nEnter details for the Account: " + (i + 1));
             System.out.println("\nEnter the Account No:");
@@ -78,7 +78,7 @@ public class BankAccountDetails {
             System.out.println("\nEnter the balance:");
             double balance = sc.nextDouble();
             sc.nextLine();
-            
+
             if (i % 2 == 0) {
                 bankAccounts[i] = new BankAccount(accountno, name, balance);
             } else {
@@ -88,7 +88,7 @@ public class BankAccountDetails {
                 bankAccounts[i].setbalance(balance);
             }
         }
-        
+
         while (true) {
             System.out.println(
                     "Press 0 if you want to deposit money to a specific account.Press 1 if you want to withdraw money from a specific account.Press 2 to exit:");
@@ -133,7 +133,9 @@ public class BankAccountDetails {
         sc.close();
     }
 }
-/*Bank Account Details: Implement a BankAccount class with private
-data: account number, holder name, and balance. Use methods to
-deposit and withdraw. Create an array of N accounts and display final
-balances. */
+/*
+ * Bank Account Details: Implement a BankAccount class with private
+ * data: account number, holder name, and balance. Use methods to
+ * deposit and withdraw. Create an array of N accounts and display final
+ * balances.
+ */
